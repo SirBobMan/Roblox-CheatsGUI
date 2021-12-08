@@ -1,0 +1,299 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local CheatsGUI = Instance.new("ScreenGui")
+local Menu = Instance.new("Frame")
+local InfiniteHealth = Instance.new("TextButton")
+local SpeedJumpBoost = Instance.new("TextButton")
+local Load = Instance.new("TextButton")
+local Logs = Instance.new("TextLabel")
+local HD_ADMIN = Instance.new("TextButton")
+local Credits = Instance.new("TextLabel")
+local extranote = Instance.new("TextLabel")
+local MainFrame = Instance.new("Frame")
+local CheatingStuff = Instance.new("TextLabel")
+local Minimize = Instance.new("TextButton")
+local Maximize = Instance.new("TextButton")
+
+--Properties:
+
+CheatsGUI.Name = "CheatsGUI"
+CheatsGUI.Parent = game.CoreGui
+CheatsGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Menu.Name = "Menu"
+Menu.Parent = CheatsGUI
+Menu.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Menu.BorderSizePixel = 2
+Menu.Position = UDim2.new(0.678207457, 0, 0.722871423, 0)
+Menu.Size = UDim2.new(0, 318, 0, 140)
+
+InfiniteHealth.Name = "InfiniteHealth"
+InfiniteHealth.Parent = Menu
+InfiniteHealth.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+InfiniteHealth.BorderColor3 = Color3.fromRGB(255, 0, 0)
+InfiniteHealth.BorderSizePixel = 0
+InfiniteHealth.Position = UDim2.new(0.0337839201, 0, 0.0606060252, 0)
+InfiniteHealth.Size = UDim2.new(0, 125, 0, 42)
+InfiniteHealth.Font = Enum.Font.GothamBlack
+InfiniteHealth.Text = "Infinite Health (kinda bugged)"
+InfiniteHealth.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteHealth.TextScaled = true
+InfiniteHealth.TextSize = 14.000
+InfiniteHealth.TextWrapped = true
+
+SpeedJumpBoost.Name = "Speed&JumpBoost"
+SpeedJumpBoost.Parent = Menu
+SpeedJumpBoost.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SpeedJumpBoost.BorderColor3 = Color3.fromRGB(255, 0, 0)
+SpeedJumpBoost.BorderSizePixel = 0
+SpeedJumpBoost.Position = UDim2.new(0.540073216, 0, 0.0606060252, 0)
+SpeedJumpBoost.Size = UDim2.new(0, 125, 0, 42)
+SpeedJumpBoost.Font = Enum.Font.GothamBlack
+SpeedJumpBoost.Text = "Speed and Jump Boost"
+SpeedJumpBoost.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedJumpBoost.TextScaled = true
+SpeedJumpBoost.TextSize = 14.000
+SpeedJumpBoost.TextWrapped = true
+
+Load.Name = "Load"
+Load.Parent = Menu
+Load.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Load.BorderSizePixel = 2
+Load.Position = UDim2.new(0.247620404, 0, -0.30143249, 0)
+Load.Size = UDim2.new(0, 159, 0, 42)
+Load.Font = Enum.Font.GothamBlack
+Load.Text = "Load Scripts/Tools"
+Load.TextColor3 = Color3.fromRGB(0, 0, 0)
+Load.TextScaled = true
+Load.TextSize = 14.000
+Load.TextWrapped = true
+
+Logs.Name = "Logs"
+Logs.Parent = Menu
+Logs.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Logs.BorderSizePixel = 0
+Logs.Position = UDim2.new(0.0503144674, 0, 0.774891675, 0)
+Logs.Size = UDim2.new(0, 285, 0, 21)
+Logs.Font = Enum.Font.GothamBold
+Logs.Text = "Make sure the game ur playing in has HD ADMIN Before pressing the Ranker Button"
+Logs.TextColor3 = Color3.fromRGB(0, 0, 0)
+Logs.TextScaled = true
+Logs.TextSize = 14.000
+Logs.TextWrapped = true
+
+HD_ADMIN.Name = "HD_ADMIN"
+HD_ADMIN.Parent = Menu
+HD_ADMIN.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+HD_ADMIN.BorderColor3 = Color3.fromRGB(255, 0, 0)
+HD_ADMIN.BorderSizePixel = 0
+HD_ADMIN.Position = UDim2.new(0.29793483, 0, 0.42489177, 0)
+HD_ADMIN.Size = UDim2.new(0, 125, 0, 42)
+HD_ADMIN.Font = Enum.Font.GothamBlack
+HD_ADMIN.Text = "HD ADMIN HEAD ADMIN RANKER"
+HD_ADMIN.TextColor3 = Color3.fromRGB(0, 0, 0)
+HD_ADMIN.TextScaled = true
+HD_ADMIN.TextSize = 14.000
+HD_ADMIN.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = Menu
+Credits.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0, 0, 0.467748791, 0)
+Credits.Size = UDim2.new(0, 94, 0, 27)
+Credits.Font = Enum.Font.GothamBold
+Credits.Text = "Thanks to 578x736 for making the ranking scripts"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+extranote.Name = "extranote"
+extranote.Parent = Menu
+extranote.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+extranote.BorderSizePixel = 0
+extranote.Position = UDim2.new(0.71069181, 0, 0.424891651, 0)
+extranote.Size = UDim2.new(0, 82, 0, 43)
+extranote.Font = Enum.Font.GothamBold
+extranote.Text = "If nothing happens when you press the button, reset, wait, then press it again!"
+extranote.TextColor3 = Color3.fromRGB(0, 0, 0)
+extranote.TextScaled = true
+extranote.TextSize = 14.000
+extranote.TextWrapped = true
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = CheatsGUI
+MainFrame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 2
+MainFrame.Position = UDim2.new(0.678207457, 0, 0.956594348, 0)
+MainFrame.Size = UDim2.new(0, 318, 0, 26)
+
+CheatingStuff.Name = "CheatingStuff"
+CheatingStuff.Parent = MainFrame
+CheatingStuff.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+CheatingStuff.BorderSizePixel = 0
+CheatingStuff.Position = UDim2.new(3.7252903e-09, 0, 0.15384616, 0)
+CheatingStuff.Size = UDim2.new(0, 200, 0, 18)
+CheatingStuff.Font = Enum.Font.GothamBlack
+CheatingStuff.Text = "Miniature Cheating Thing"
+CheatingStuff.TextColor3 = Color3.fromRGB(0, 0, 0)
+CheatingStuff.TextScaled = true
+CheatingStuff.TextSize = 100.000
+CheatingStuff.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+CheatingStuff.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = MainFrame
+Minimize.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderSizePixel = 3
+Minimize.Position = UDim2.new(0.660377324, 0, 0.192307472, 0)
+Minimize.Size = UDim2.new(0, 16, 0, 16)
+Minimize.Font = Enum.Font.GothamBold
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+Maximize.Name = "Maximize"
+Maximize.Parent = MainFrame
+Maximize.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Maximize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Maximize.BorderSizePixel = 3
+Maximize.Position = UDim2.new(0.767295539, 0, 0.192307472, 0)
+Maximize.Size = UDim2.new(0, 16, 0, 16)
+Maximize.Font = Enum.Font.GothamBold
+Maximize.Text = "+"
+Maximize.TextColor3 = Color3.fromRGB(0, 0, 0)
+Maximize.TextScaled = true
+Maximize.TextSize = 14.000
+Maximize.TextWrapped = true
+
+-- Scripts:
+
+local function BGFAFIW_fake_script() -- InfiniteHealth.HealthScript 
+	local script = Instance.new('LocalScript', InfiniteHealth)
+
+	local Player = game.Players.LocalPlayer
+	
+	if script.Parent.BackgroundColor3 == Color3.fromRGB(255,0,0) then
+		script.Parent.MouseButton1Click:Connect(function()
+			if script.Parent.Parent.Load.Text == "Succesfully loaded!" then
+				local FF = Instance.new("ForceField")
+				FF.Parent = Player.Character
+				local InfiniteHealth = true
+				while InfiniteHealth == true do
+					Player.Character.Humanoid.Health = math.huge
+					Player.Character.Humanoid.MaxHealth = math.huge
+					script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+					script.Parent.Text = "Infinite Health (ACTIVATED)"
+					wait(0.05)
+					Player.Character.Humanoid.Health = math.huge
+					Player.Character.Humanoid.MaxHealth = math.huge
+				end
+				if Player.Character.Humanoid.Health == 0 then
+					Player.Character.Humanoid.Health = 10
+					InfiniteHealth = false
+					script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
+					script.Parent.Text = "Infinite Health (kinda bugged)"
+				end
+				while Player.Character.Humanoid.Health ~= 0 do
+					Player.Character.Humanoid.Health = math.huge
+					Player.Character.Humanoid.MaxHealth = math.huge
+				end
+			end
+		end)
+	end
+	
+end
+coroutine.wrap(BGFAFIW_fake_script)()
+local function RIYO_fake_script() -- SpeedJumpBoost.BoostsScript 
+	local script = Instance.new('LocalScript', SpeedJumpBoost)
+
+	local Player = game.Players.LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.Load.Text == "Succesfully loaded!" then
+			local Boost = true
+			Player.Character.Humanoid.WalkSpeed = 50
+			Player.Character.Humanoid.JumpPower = 75
+			while Boost == true do
+				script.Parent.BackgroundColor3 = Color3.fromRGB(0,255,0)
+				script.Parent.Text = "Speed and Jump Boost Enabled"
+				wait(0.25)
+			end
+			if Player.Character.Humanoid.Health == 0 then
+				script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
+				script.Parent.Text = "Speed and Jump Boost"
+			end
+		end
+	end)
+end
+coroutine.wrap(RIYO_fake_script)()
+local function DCJR_fake_script() -- Load.Load 
+	local script = Instance.new('LocalScript', Load)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Text = "Succesfully loaded!"
+	end)
+	
+end
+coroutine.wrap(DCJR_fake_script)()
+local function NYLF_fake_script() -- HD_ADMIN.hd admin rank 
+	local script = Instance.new('Script', HD_ADMIN)
+
+	--eeee
+	local Remote = script.Parent:WaitForChild("RemoteEvent")
+	
+	Remote.OnServerEvent:Connect(function(plr)
+		local main = _G.HDAdminMain
+		main:GetModule("cf"):SetRank(game:GetService("Players")[plr.name], game.CreatorId, 4, "Perm")
+		script.Parent.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		script.Parent.Text = "Loading Rank.. if u dont get it, reset then try again.."
+	end)
+end
+coroutine.wrap(NYLF_fake_script)()
+local function ULDO_fake_script() -- HD_ADMIN.remote detector 
+	local script = Instance.new('LocalScript', HD_ADMIN)
+
+	local Remote = script.Parent:WaitForChild("RemoteEvent")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Remote:FireServer()		
+	end)
+end
+coroutine.wrap(ULDO_fake_script)()
+local function GOGLT_fake_script() -- Minimize.Minimize 
+	local script = Instance.new('LocalScript', Minimize)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Menu.Visible = false
+	end)
+	
+	
+end
+coroutine.wrap(GOGLT_fake_script)()
+local function PLLWR_fake_script() -- Maximize.Maximize 
+	local script = Instance.new('LocalScript', Maximize)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Menu.Visible = true
+	end)
+end
+coroutine.wrap(PLLWR_fake_script)()
+local function VFGPOUH_fake_script() -- CheatsGUI.GetRemoteEvent 
+	local script = Instance.new('Script', CheatsGUI)
+
+	local Remote = Instance.new("RemoteEvent")
+	Remote.Name = "RemoteEvent"
+	Remote.Parent = script.Parent.Menu.HD_ADMIN
+end
+coroutine.wrap(VFGPOUH_fake_script)()
+-- eeeeee
